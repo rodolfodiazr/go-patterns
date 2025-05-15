@@ -4,7 +4,7 @@ import "fmt"
 
 // Run demonstrates the Decorator pattern
 func Run() {
-	fmt.Println("OOP-style decorator")
+	fmt.Println("\n## OOP-style decorator")
 	var notifier Notifier = &EmailNotifier{}
 
 	notifier = &SMSNotifier{Notifier: notifier}
@@ -12,7 +12,7 @@ func Run() {
 
 	notifier.Send("This is my message.")
 
-	fmt.Println("\nFunction-based decorator")
+	fmt.Println("\n## Function-based decorator")
 	var baseCalc PriceCalculator = func(price float64) float64 {
 		return price
 	}
