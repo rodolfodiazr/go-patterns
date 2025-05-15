@@ -1,1 +1,1 @@
-package structural
+package composite

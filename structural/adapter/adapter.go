@@ -1,1 +1,1 @@
-package composite
+package adapter
