@@ -1,1 +1,3 @@
 package command
+
+func Run() {}
