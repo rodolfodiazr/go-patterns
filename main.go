@@ -45,7 +45,6 @@ func main() {
 	fmt.Println("\n--------------------------\n# Prototype")
 	prototype.Run()
 
-	// TODO: Command
 	fmt.Println("\n--------------------------\n# Command")
 	command.Run()
 
