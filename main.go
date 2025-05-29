@@ -48,7 +48,6 @@ func main() {
 	fmt.Println("\n--------------------------\n# Command")
 	command.Run()
 
-	// TODO: Adapter
 	fmt.Println("\n--------------------------\n# Adapter")
 	adapter.Run()
 
