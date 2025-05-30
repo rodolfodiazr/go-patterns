@@ -51,7 +51,6 @@ func main() {
 	fmt.Println("\n--------------------------\n# Adapter")
 	adapter.Run()
 
-	// TODO: Iterator
 	fmt.Println("\n--------------------------\n# Iterator")
 	iterator.Run()
 
