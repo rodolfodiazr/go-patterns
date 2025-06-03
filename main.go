@@ -7,6 +7,7 @@ import (
 	"github.com/rodolfodiazr/go-patterns/behavioral/iterator"
 	"github.com/rodolfodiazr/go-patterns/behavioral/mediator"
 	"github.com/rodolfodiazr/go-patterns/behavioral/observer"
+	"github.com/rodolfodiazr/go-patterns/behavioral/state"
 	"github.com/rodolfodiazr/go-patterns/behavioral/strategy"
 	"github.com/rodolfodiazr/go-patterns/creational/abstractfactory"
 	"github.com/rodolfodiazr/go-patterns/creational/builder"
@@ -57,4 +58,7 @@ func main() {
 
 	fmt.Println("\n--------------------------\n# Mediator")
 	mediator.Run()
+
+	fmt.Println("\n--------------------------\n# State")
+	state.Run()
 }
