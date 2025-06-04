@@ -9,6 +9,7 @@ import (
 	"github.com/rodolfodiazr/go-patterns/behavioral/observer"
 	"github.com/rodolfodiazr/go-patterns/behavioral/state"
 	"github.com/rodolfodiazr/go-patterns/behavioral/strategy"
+	"github.com/rodolfodiazr/go-patterns/behavioral/templatemethod"
 	"github.com/rodolfodiazr/go-patterns/creational/abstractfactory"
 	"github.com/rodolfodiazr/go-patterns/creational/builder"
 	"github.com/rodolfodiazr/go-patterns/creational/factorymethod"
@@ -61,4 +62,7 @@ func main() {
 
 	fmt.Println("\n--------------------------\n# State")
 	state.Run()
+
+	fmt.Println("\n--------------------------\n# Template Method")
+	templatemethod.Run()
 }
