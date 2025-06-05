@@ -16,6 +16,7 @@ import (
 	"github.com/rodolfodiazr/go-patterns/creational/prototype"
 	"github.com/rodolfodiazr/go-patterns/creational/singleton"
 	"github.com/rodolfodiazr/go-patterns/structural/adapter"
+	"github.com/rodolfodiazr/go-patterns/structural/composite"
 	"github.com/rodolfodiazr/go-patterns/structural/decorator"
 	"github.com/rodolfodiazr/go-patterns/structural/facade"
 )
@@ -65,4 +66,7 @@ func main() {
 
 	fmt.Println("\n--------------------------\n# Template Method")
 	templatemethod.Run()
+
+	fmt.Println("\n--------------------------\n# Composite")
+	composite.Run()
 }
