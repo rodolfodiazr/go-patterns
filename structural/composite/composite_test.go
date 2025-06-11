@@ -113,7 +113,7 @@ func Test_Directory_Name(t *testing.T) {
 	}
 }
 
-func TestDirectory_Display(t *testing.T) {
+func Test_Directory_Display(t *testing.T) {
 	tCases := []struct {
 		name            string
 		createDir       func() *Directory
