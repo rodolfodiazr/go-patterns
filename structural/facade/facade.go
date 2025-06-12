@@ -66,7 +66,6 @@ func NewPaymentProcessor(v Validator, g Gateway, n Notifier, l Logger) *PaymentP
 }
 
 func (p *PaymentProcessor) Process(card string, emailAddress string, amount float64) {
-	fmt.Println("Process: ", p.validator.Validate(card), p.validator)
 	if !p.validator.Validate(card) {
 		fmt.Println("Invalid card")
 		return
