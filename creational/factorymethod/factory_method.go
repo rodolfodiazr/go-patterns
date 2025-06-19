@@ -11,14 +11,14 @@ type Notifier interface {
 type EmailNotifier struct{}
 
 func (e *EmailNotifier) Send(message string) {
-	fmt.Println("[Email]: ", message)
+	fmt.Print("[Email]: ", message)
 }
 
 // SMSNotifier is another concrete product
 type SMSNotifier struct{}
 
 func (s *SMSNotifier) Send(message string) {
-	fmt.Println("[SMS]: ", message)
+	fmt.Print("[SMS]: ", message)
 }
 
 // NotifierType defines types of notifiers
