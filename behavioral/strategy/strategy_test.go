@@ -17,7 +17,7 @@ func (m *MockPayment) Pay(amount float64) {
 func Test_PaymentMethod_Checkout(t *testing.T) {
 	m := &MockPayment{}
 	cart := &ShoppingCart{
-		Amount:  55.00,
+		Amount:  50.00,
 		Payment: m,
 	}
 
