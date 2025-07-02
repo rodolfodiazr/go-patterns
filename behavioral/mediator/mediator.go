@@ -4,57 +4,73 @@ import "fmt"
 
 // Mediator defines the interface for communication
 type Mediator interface {
-	Send(sender, message string)
-	Register(user *User)
+	Send(user User, message string)
+	Register(user User)
+}
+
+// User defines the interface for users
+type User interface {
+	Name() string
+	Send(message string)
+	Receive(sender string, message string)
+	SetChat(chat Mediator)
 }
 
 // ChatRoom is the concrete mediator
 type ChatRoom struct {
-	users map[string]*User
+	users map[string]User
 }
 
 // NewChatRoom creates a new chat room
 func NewChatRoom() *ChatRoom {
 	return &ChatRoom{
-		users: make(map[string]*User),
+		users: make(map[string]User),
 	}
 }
 
 // Register adds a user to the chat room
-func (c *ChatRoom) Register(user *User) {
-	c.users[user.name] = user
-	user.chat = c
+func (c *ChatRoom) Register(user User) {
+	fmt.Printf("[System] %s has joined the chat.\n", user.Name())
+	c.users[user.Name()] = user
+	user.SetChat(c)
 }
 
 // Send sends a message from one user to all others
-func (c *ChatRoom) Send(sender string, message string) {
+func (c *ChatRoom) Send(sender User, message string) {
 	for name, user := range c.users {
-		if name != sender {
-			user.Receive(sender, message)
+		if name != sender.Name() {
+			user.Receive(sender.Name(), message)
 		}
 	}
 }
 
-// User is a participant in the chat room
-type User struct {
+// ChatUser is a participant in the chat room
+type ChatUser struct {
 	name string
 	chat Mediator
 }
 
 // NewUser creates a new user
-func NewUser(name string) *User {
-	return &User{name: name}
+func NewUser(name string) *ChatUser {
+	return &ChatUser{name: name}
 }
 
 // Send sends a message via the mediator
-func (u *User) Send(message string) {
-	fmt.Printf("[%s sends]: %s\n", u.name, message)
-	u.chat.Send(u.name, message)
+func (u *ChatUser) Send(message string) {
+	u.chat.Send(u, message)
 }
 
 // Receive receives a message from the chat room
-func (u *User) Receive(sender, message string) {
+func (u *ChatUser) Receive(sender, message string) {
 	fmt.Printf("[%s receives from %s]: %s\n", u.name, sender, message)
+}
+
+func (u *ChatUser) Name() string {
+	return u.name
+}
+
+func (u *ChatUser) SetChat(chat Mediator) {
+	u.chat = chat
 }
 
 // Run demonstrates the Mediator pattern
