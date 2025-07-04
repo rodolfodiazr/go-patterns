@@ -2,6 +2,19 @@ package iterator
 
 import "testing"
 
+func Test_ProductIterator_Empty(t *testing.T) {
+	collection := NewProductCollection()
+	it := collection.CreateIterator()
+
+	if it.HasNext() {
+		t.Error("Expected HasNext() to be false for empty collection")
+	}
+
+	if product := it.Next(); product != nil {
+		t.Errorf("Expected Next() to return nil for empty collection, got: %v", product)
+	}
+}
+
 func Test_ProductIterator(t *testing.T) {
 	products := []*Product{
 		{Name: "Laptop", Price: 1200},
