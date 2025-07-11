@@ -4,6 +4,20 @@ This project is a practical collection of design pattern implementations in Go.
 
 ## Pattern Categories
 
+### Behavioral Patterns
+
+| Pattern         | Status   |
+|-----------------|----------|
+| Command         | ✅ Done  |
+| Iterator        | ✅ Done  |
+| Mediator        | ✅ Done  |
+| Observer        | ✅ Done  |
+| State           | ✅ Done  |
+| Strategy        | ✅ Done  |
+| Template Method | ✅ Done  |
+
+---
+
 ### Creational Patterns
 
 | Pattern           | Status  |
@@ -11,7 +25,7 @@ This project is a practical collection of design pattern implementations in Go.
 | Abstract Factory  | ✅ Done |
 | Builder           | ✅ Done |
 | Factory Method    | ✅ Done |
-| Prototype         | 🔲 TODO |
+| Prototype         | ✅ Done |
 | Singleton         | ✅ Done |
 
 ---
@@ -20,26 +34,10 @@ This project is a practical collection of design pattern implementations in Go.
 
 | Pattern    | Status  |
 |------------|---------|
-| Adapter    | 🔲 TODO |
-| Composite  | 🔲 TODO |
+| Adapter    | ✅ Done |
+| Composite  | ✅ Done |
 | Decorator  | ✅ Done |
 | Facade     | ✅ Done |
-
----
-
-### Behavioral Patterns
-
-| Pattern         | Status   |
-|-----------------|----------|
-| Command         | 🔲 TODO  |
-| Iterator        | 🔲 TODO  |
-| Mediator        | 🔲 TODO  |
-| Observer        | ✅ Done  |
-| State           | 🔲 TODO  |
-| Strategy        | ✅ Done  |
-| Template Method | 🔲 TODO  |
-
----
 
 ## How to Run
 
